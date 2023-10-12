@@ -1,83 +1,229 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-* 
-{
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;   
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 body {
-    font-family: 'Bebas Neue', cursive;
-    background-color: black;
-    color: white;
+  font-family: "Bebas Neue", cursive;
+  background-color: black;
+  color: white;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 header {
   background-image: url(images/bg.jpg);
-  background-position: center center; 
-  background-repeat: no-repeat; 
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   min-height: 70vh;
   display: flex;
   align-items: center;
-
 }
-.menu 
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-font-size: 35px;
-color: white;
+  font-size: 35px;
+  color: white;
 }
 .menu .naver ul li {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 
-.menu .naver ul li a 
-{
+.menu .naver ul li a {
   font-size: 22px;
   padding: 20px;
   color: white;
-  display: block;  
+  display: block;
 }
 
- .menu .naver ul li a:hover 
- {
-    color: #c3069d;
- }
- .menu 
- {
-    
- }
+.menu .naver ul li a:hover {
+  color: #c3069d;
+}
+.menu {
+}
 
- .menu-icono 
- {
-    width: 25px;
- }
+.menu-icono {
+  width: 25px;
+}
 
- .menu label 
- {
-    cursor: pointer;
-    display: none;
-     
- }
- .header-content 
- {
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+.header-content {
+  display: flex;
+  width: 100%;
+}
+.header-1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: flex-end;
+}
+
+.header-1 img {
+  width: 300px;
+}
+
+.header-2 {
+  width: 50%;
+  margin-top: 80px;
+  text-align: end;
+}
+.header-2 h1 {
+  color: a#f3e9e972;
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.header-2 img {
+  width: 70px;
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 7px 20px;
+  background-color: #c3069d;
+  color: white;
+  font-size: 20px;
+}
+.btn-2 {
+  width: 110px;
+  display: inline-block;
+  padding: 7px 20px;
+  background-color: #c3069d;
+  font-size: 20px;
+  margin-top: 38px;
+  color: white;
+}
+
+.movies {
+  padding: 50px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+.h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #f3e9e972;
+}
+
+hr {
+  border: 1px solid magenta;
+}
+
+.box-container-1,
+.box-container-2,
+.box-container-3 .box-container-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box4 {
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+}
+.box-1:nth-child(1),
+.box-1:nth-child(2),
+.box-1:nth-child(3),
+.box-1:nth-child(4) {
+  display: inline-block;
+}
+
+.box-2:nth-child(1),
+.box-2:nth-child(2),
+.box-2:nth-child(3),
+.box-2:nth-child(4) {
+  display: inline-block;
+}
+.box-3:nth-child(1),
+.box-3:nth-child(2),
+.box-3:nth-child(3),
+.box-3:nth-child(4) {
+  display: inline-block;
+}
+.box-4:nth-child(1),
+.box-4:nth-child(2),
+.box-4:nth-child(3),
+.box-4:nth-child(4) {
+  display: inline-block;
+}
+
+.load-more {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: 1px solid magenta;
+  color: #e1d8e0;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.load-more:hover {
+  background-color: #e949c9;
+  color: #e1d8e0;
+}
+
+.content img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.content {
+  color: #e1d8e0;
+  font-size: 20px;
+}
+
+.footer 
+{
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    padding: 100px 0;
+    margin-top: 100px;
+    border-top: 1px solid mediumorchid;
+}
+
+.footer ul 
+{
+    display: flex;
+}
+ footer h3 
+ {
+    font-size: 30px;
  }
-  
+ .footer a 
+ {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+ }
