@@ -33,6 +33,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .logo {
@@ -42,6 +43,7 @@ header {
 .menu .naver ul li {
   position: relative;
   float: left;
+  background-color: rgba(222, 214, 214, 0);
 }
 
 .menu .naver ul li a {
@@ -54,6 +56,61 @@ header {
 .menu .naver ul li a:hover {
   color: #c3069d;
 }
+
+
+.formulario-container
+{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #a56ccb;
+  padding: 20px;
+  border: 3px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100vh;
+  left: -100vw;
+  top: 0;
+  z-index: 1;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #c3069d;
+  transition: all 0.5s ease-in-out;
+}
+
+.BTNañadirPelicula
+{
+  left: 0;
+}
+
+#formulario 
+{
+  display: flex;
+  flex-direction: column ;
+  gap: 16px;
+  width: 300px;
+}
+
+
+
+
+
+
+
+input[type="submit"] {
+  background-color: #b83495;
+  color: rgb(29, 29, 29);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #7b36a9;
+}
+
 
 
 .menu-icono {
@@ -140,11 +197,14 @@ hr {
   
 }
 
+#fomulario {
+  display: none;
+}
 
 .box-container-1,
 .box-container-2,
-.box-container-3
- .box-container-4 {
+.box-container-3,
+.box-container-4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
@@ -261,9 +321,9 @@ footer h3 {
   width: 100%;
 }
 
-.btn-1 {
-  display: 
-}
+
+
+
 
 #menu:checked ~ .naver {
   display: initial;
