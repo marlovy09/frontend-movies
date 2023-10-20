@@ -6,6 +6,11 @@
   text-decoration: none;
   list-style: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Bebas Neue", cursive;
   background-color: black;
@@ -33,7 +38,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 .logo {
@@ -57,9 +61,7 @@ header {
   color: #c3069d;
 }
 
-
-.formulario-container
-{
+.formulario-container {
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -80,24 +82,16 @@ header {
   transition: all 0.5s ease-in-out;
 }
 
-.BTNañadirPelicula
-{
+.BTNañadirPelicula {
   left: 0;
 }
 
-#formulario 
-{
+#formulario {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   gap: 16px;
   width: 300px;
 }
-
-
-
-
-
-
 
 input[type="submit"] {
   background-color: #b83495;
@@ -110,8 +104,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #7b36a9;
 }
-
-
 
 .menu-icono {
   width: 35px;
@@ -186,15 +178,13 @@ hr {
   border: 1px solid magenta;
 }
 
-#BTNañadirPelicula
-{
+#BTNañadirPelicula {
   display: inline-block;
   padding: 10px 20px 10px 10px;
-  border-bottom: 20px ;
+  border-bottom: 20px;
   background-color: #c3069d;
   color: white;
   font-size: 20px;
-  
 }
 
 #fomulario {
@@ -300,6 +290,11 @@ footer h3 {
   color: #e949c9;
 }
 
+.menu .naver ul {
+  display: flex;
+  flex-direction: row;
+}
+
 @media (max-width: 991px) {
   .menu {
     padding: 20px;
@@ -315,51 +310,52 @@ footer h3 {
     background-color: black;
     display: none;
   }
+
+  .menu .naver ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .menu .naver ul li {
   width: 100%;
 }
 
-
-
-
+#menu {
+  display: none;
+}
 
 #menu:checked ~ .naver {
   display: initial;
 }
 
-.header-content 
-{
+.header-content {
   flex-direction: column;
   padding: 180px 30px 30px 30px;
 }
 
 .header-1 {
-  width: 100% ;
+  width: 100%;
   align-items: center;
 }
 
 .header-2 {
-  width: 100% ;
+  width: 100%;
   align-items: center;
 }
 
-.movies 
-{
+.movies {
   padding: 30px;
 }
 
-.footer 
-{
+.footer {
   margin-top: 30px;
   padding: 30px;
   flex-direction: column;
   text-align: center;
 }
 
-.footer ul 
-{
+.footer ul {
   margin-top: 15px;
   justify-content: center;
 }
