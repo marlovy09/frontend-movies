@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -7,17 +6,14 @@
   text-decoration: none;
   list-style: none;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-family: "Bebas Neue", cursive;
   background-color: black;
   color: white;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -41,7 +37,6 @@ header {
   justify-content: space-between;
   padding: 0px 20px;
 }
-
 .logo {
   font-size: 35px;
   color: white;
@@ -51,18 +46,15 @@ header {
   float: left;
   background-color: rgba(222, 214, 214, 0);
 }
-
 .menu .naver ul li a {
   font-size: 22px;
   padding: 20px;
   color: white;
   display: block;
 }
-
 .menu .naver ul li a:hover {
   color: #c3069d;
 }
-
 #btn-agregar {
   display: flex;
   align-items: center;
@@ -72,7 +64,6 @@ header {
   color: white;
   cursor: pointer;
 }
-
 .formulario-container {
   backdrop-filter: blur(22px);
   align-items: center;
@@ -93,7 +84,6 @@ header {
   box-shadow: 0 2px 4px #c3069d;
   transition: all 0.5s ease-in-out;
 }
-
 .editar-container {
   backdrop-filter: blur(22px);
   align-items: center;
@@ -114,11 +104,9 @@ header {
   box-shadow: 0 2px 4px #c3069d;
   transition: all 0.5s ease-in-out;
 }
-
 .abrir-formulario {
   left: 0;
 }
-
 .btn-cerrar-editar {
   background-color: #b83495;
   color: white;
@@ -129,7 +117,6 @@ header {
   border: 1px solid transparent;
   border-radius: 6px;
 }
-
 #formulario-agregar,
 #formulario-editar {
   display: flex;
@@ -137,10 +124,10 @@ header {
   gap: 10px;
   width: 300px;
 }
-
 #formulario-agregar label,
 #formulario-editar label {
   font-size: 20px;
+  display: inline-block;
 }
 
 #formulario-agregar input,
@@ -150,7 +137,6 @@ header {
   border: none;
   outline: none;
 }
-
 input[type="submit"] {
   background-color: #b83495;
   color: white;
@@ -158,11 +144,9 @@ input[type="submit"] {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-
 input[type="submit"]:hover {
   background-color: #7b36a9;
 }
-
 .btn-cerrar {
   background-color: #b83495;
   color: white;
@@ -173,16 +157,13 @@ input[type="submit"]:hover {
   border: 1px solid transparent;
   border-radius: 6px;
 }
-
 .menu-icono {
   width: 35px;
 }
-
 .menu label {
   cursor: pointer;
   display: none;
 }
-
 .header-content {
   display: flex;
   width: 100%;
@@ -193,11 +174,9 @@ input[type="submit"]:hover {
   width: 50%;
   align-self: flex-end;
 }
-
 .header-1 img {
   width: 300px;
 }
-
 .header-2 {
   width: 50%;
   margin-top: 80px;
@@ -208,11 +187,9 @@ input[type="submit"]:hover {
   font-size: 80px;
   line-height: 80px;
 }
-
 .header-2 img {
   width: 70px;
 }
-
 .btn-1 {
   display: inline-block;
   padding: 7px 20px;
@@ -229,7 +206,6 @@ input[type="submit"]:hover {
   margin-top: 38px;
   color: white;
 }
-
 .movies {
   padding: 50px 0px 0px 0px;
   display: flex;
@@ -239,15 +215,12 @@ input[type="submit"]:hover {
   font-size: 35px;
   margin-bottom: 20px;
 }
-
 h1 {
   color: #f3e9e972;
 }
-
 hr {
   border: 1px solid magenta;
 }
-
 #BTNañadirPelicula {
   display: inline-block;
   padding: 10px 20px 10px 10px;
@@ -256,11 +229,9 @@ hr {
   color: white;
   font-size: 20px;
 }
-
 #fomulario {
   display: none;
 }
-
 .btn-eliminar {
   position: absolute;
   top: 4px;
@@ -274,11 +245,9 @@ hr {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-
 .btn-eliminar:hover {
   background: #a40202;
 }
-
 .btn-editar {
   position: absolute;
   left: 4px;
@@ -292,14 +261,12 @@ hr {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-
 .btn-editar:hover {
   background: #05a402;
 }
 .card {
   position: relative;
 }
-
 .box-container-1,
 .box-container-2,
 .box-container-3,
@@ -308,7 +275,6 @@ hr {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
 }
-
 .box-1,
 .box-2,
 .box-3,
@@ -323,7 +289,6 @@ hr {
 .box-1:nth-child(4) {
   display: inline-block;
 }
-
 .box-2:nth-child(1),
 .box-2:nth-child(2),
 .box-2:nth-child(3),
@@ -343,28 +308,10 @@ hr {
   display: inline-block;
 }
 
-.load-more {
-  margin-top: 40px;
-  display: inline-block;
-  padding: 10px 25px;
-  border-radius: 15px;
-  border: 1px solid magenta;
-  color: #e1d8e0;
-  font-size: 16px;
-  cursor: pointer;
-  align-self: flex-end;
-}
-
-.load-more:hover {
-  background-color: #e949c9;
-  color: #e1d8e0;
-}
-
 .content img {
   width: 100%;
   margin-bottom: 15px;
 }
-
 .content h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -373,7 +320,6 @@ hr {
   color: #e1d8e0;
   font-size: 20px;
 }
-
 .footer {
   display: flex;
   justify-content: space-between;
@@ -381,15 +327,12 @@ hr {
   margin-top: 100px;
   border-top: 1px solid mediumorchid;
 }
-
 .footer ul {
   display: flex;
 }
-
 footer h3 {
   font-size: 30px;
 }
-
 .footer a {
   color: white;
   font-size: 20px;
@@ -397,16 +340,13 @@ footer h3 {
   display: inline-block;
   text-align: center;
 }
-
 .footer a:hover {
   color: #e949c9;
 }
-
 .menu .naver ul {
   display: flex;
   flex-direction: row;
 }
-
 @media (max-width: 991px) {
   .menu {
     padding: 20px;
@@ -422,47 +362,38 @@ footer h3 {
     background-color: black;
     display: none;
   }
-
   .menu .naver ul {
     display: flex;
     flex-direction: column;
   }
 }
-
 #menu {
   display: none;
 }
-
 #menu:checked ~ .naver {
   display: initial;
 }
-
 .header-content {
   flex-direction: column;
   padding: 180px 30px 30px 30px;
 }
-
 .header-1 {
   width: 100%;
   align-items: center;
 }
-
 .header-2 {
   width: 100%;
   align-items: center;
 }
-
 .movies {
   padding: 30px;
 }
-
 .footer {
   margin-top: 30px;
   padding: 30px;
   flex-direction: column;
   text-align: center;
 }
-
 .footer ul {
   margin-top: 15px;
   justify-content: center;

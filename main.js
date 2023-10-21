@@ -1,4 +1,3 @@
-import "./style.css";
 
 import "./style.css";
 const contenedorFormulario = document.querySelector(".formulario-container");
@@ -200,7 +199,10 @@ function configurarFormulario(pelicula) {
 // Evento DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
   obtenerPeliculas();
+
 });
+
+
 
 // Evento click
 document.addEventListener("click", (e) => {
@@ -284,3 +286,6 @@ document.addEventListener("submit", (e) => {
     });
   }
 });
+
+
+            
