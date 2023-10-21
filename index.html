@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.lordicon.com/lordicon-1.1.0.js"></script>
     <title>MC MOVIES</title>
   </head>
   <body>
     <header id="inicio" class="headerpag">
       <div class="menu container">
-        <a href="a" class="logo">MC MOVIES</a>
+        <a href="/" class="logo">MC MOVIES</a>
         <input type="checkbox" id="menu" />
         <label for="menu">
           <img
@@ -20,15 +21,15 @@
         <nav class="naver">
           <ul>
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#Peliculas">Peliculas</a></li>
-            <li><a href="#Tendencias">Tendencias</a></li>
-            <li><a href="#Series">Series</a></li>
+            <li><a href="#peliculas">Peliculas</a></li>
+            <li><a href="#tendencias">Tendencias</a></li>
+            <li><a href="#series">Series</a></li>
             <li id="btn-agregar">Añadir película</li>
           </ul>
         </nav>
         <div class="formulario-container">
-          <button id="BTNañadirPelicula">Añadir pelicula</button>
-          <form id="fomulario1">
+          <h2>Añadir pelicula</h2>
+          <form id="formulario-agregar">
             <label for="titulo">Título:</label>
             <input type="text" id="titulo" name="titulo" required />
 
@@ -40,13 +41,11 @@
             <br />
 
             <label for="imagen">Imagen:</label>
-            <input
-              type="file"
-              id="imagen"
-              name="imagen"
-              accept="image/*"
-              required
-            />
+            <input type="url" id="imagen" name="imagen" required />
+            <br />
+
+            <label for="fecha">Año de lanzamiento:</label>
+            <input type="number" id="fecha" name="fecha" required />
             <br />
 
             <label for="rating">Rating:</label>
@@ -61,10 +60,48 @@
 
             <br />
 
-            <input type="submit" value="Enviar" />
+            <input type="submit" value="ENVIAR" />
           </form>
 
           <button class="btn-cerrar">cerrar formulario</button>
+        </div>
+        <div class="editar-container">
+          <h2>Editar pelicula</h2>
+          <form id="formulario-editar">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required />
+
+            <br />
+
+            <label for="genero">Género:</label>
+            <input type="text" id="genero" name="genero" required />
+
+            <br />
+
+            <label for="imagen">Imagen:</label>
+            <input type="url" id="imagen" name="imagen" required />
+            <br />
+
+            <label for="fecha">Año de lanzamiento:</label>
+            <input type="number" id="fecha" name="fecha" required />
+            <br />
+
+            <label for="rating">Rating:</label>
+            <input
+              type="number"
+              id="rating"
+              name="rating"
+              min="1"
+              max="10"
+              required
+            />
+
+            <br />
+
+            <input type="submit" value="ENVIAR" />
+          </form>
+
+          <button class="btn-cerrar-editar">cerrar formulario</button>
         </div>
       </div>
 
@@ -80,86 +117,14 @@
       </div>
     </header>
 
-    <section id="Tendencias" class="movies container">
-      <h2>Peliculas en tendencia</h2>
+    <section id="peliculas" class="movies container">
+      <h2>Peliculas favoritas</h2>
       <hr />
-      <div class="box-container-1">
-        <div class="box-1">
-          <div class="content">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwCE6pjK3FfCFBX5bnaGKodb3XpNJssCBxfQ&usqp=CAU"
-              alt="Amazing spiderman 2 "
-            />
-            <h3>Amazing spiderman 2</h3>
-            <p></p>
-            <span>Accion/Fantasia/Ciencia ficcion</span>
-          </div>
-          <div class="card">
-            <div>
-              <h3>Amazing spiderman</h3>
-            </div>
-          </div>
-        </div>
-        <div class="box-1">
-          <div class="content">
-            <img
-              src="https://m.media-amazon.com/images/M/MV5BMjMyOTM4MDMxNV5BMl5BanBnXkFtZTcwNjIyNzExOA@@._V1_.jpg"
-              alt="Amazing spiderman "
-            />
-            <h3>Amazing spiderman</h3>
-            <span
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
-            >
-          </div>
-        </div>
-        <div class="box-1">
-          <div class="content">
-            <img
-              src="https://pics.filmaffinity.com/Nowhere-253002170-large.jpg"
-              alt="Nowhere"
-            />
-            <h3>Nowhere</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <span>Accion/Suspenso</span>
-          </div>
-        </div>
-        <div class="box-1">
-          <div class="content">
-            <img
-              src="https://es.web.img3.acsta.net/pictures/23/05/09/10/42/0347977.jpg"
-              alt="megalodon 2"
-            />
-            <h3>Pelicula hd</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="box-1">
-          <div class="content">
-            <img
-              src="https://es.web.img2.acsta.net/pictures/23/07/20/11/29/5479684.jpg"
-              alt="Barbie 2023"
-            />
-            <h3>Barbie</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-
-        <div class="box-1">
-          <div class="content">
-            <img
-              src="https://pics.filmaffinity.com/Ant_Man_y_la_Avispa_Quantumanaia-585469373-large.jpg"
-              alt=""
-            />
-            <h3>Pelicula hd</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <div class="load-more" id="load-more-1">cargar mas</div>
+      <div class="box-container-1"></div>
     </section>
 
-    <section id="Peliculas" class="movies container">
-      <h2>Peliculas de accion</h2>
+    <section id="tendencias" class="movies container">
+      <h2>Peliculas en tendecia</h2>
       <hr />
       <div class="box-container-2">
         <div class="box-2">
@@ -229,7 +194,7 @@
       <div class="load-more" id="load-more-2">cargar mas</div>
     </section>
 
-    <section id="Peliculas" class="movies container">
+    <section id="peliculas" class="movies container">
       <h2>Peliculas de terror</h2>
       <hr />
       <div class="box-container-3">
@@ -372,7 +337,7 @@
       <div class="load-more" id="load-more-2">cargar mas</div>
     </section>
 
-    <section id="Series" class="movies container">
+    <section id="series" class="movies container">
       <h2>Series</h2>
       <hr />
       <div class="box-container-4">
@@ -445,9 +410,9 @@
       <h3>MC MOVIES</h3>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#Peliculas">Peliculas</a></li>
-        <li><a href="#Tendencias">Tendencias</a></li>
-        <li><a href="#Series">Series</a></li>
+        <li><a href="#peliculas">Peliculas</a></li>
+        <li><a href="#tendencias">Tendencias</a></li>
+        <li><a href="#series">Series</a></li>
       </ul>
     </footer>
 

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +39,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 
 .logo {
@@ -72,12 +74,13 @@ header {
 }
 
 .formulario-container {
+  backdrop-filter: blur(22px);
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  background-color: #a56ccb;
+  background-color: #a56ccb83;
   padding: 20px;
   border: 3px;
   border-radius: 5px;
@@ -85,34 +88,90 @@ header {
   height: 100vh;
   left: -100vw;
   top: 0;
-  z-index: 1;
-  max-width: 600px;
+  z-index: 1001;
   border-radius: 8px;
   box-shadow: 0 2px 4px #c3069d;
   transition: all 0.5s ease-in-out;
 }
 
-.BTNañadirPelicula {
+.editar-container {
+  backdrop-filter: blur(22px);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #a56ccb83;
+  padding: 20px;
+  border: 3px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100vh;
+  left: -100vw;
+  top: 0;
+  z-index: 1001;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #c3069d;
+  transition: all 0.5s ease-in-out;
+}
+
+.abrir-formulario {
   left: 0;
 }
 
-#formulario {
+.btn-cerrar-editar {
+  background-color: #b83495;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+#formulario-agregar,
+#formulario-editar {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   width: 300px;
+}
+
+#formulario-agregar label,
+#formulario-editar label {
+  font-size: 20px;
+}
+
+#formulario-agregar input,
+#formulario-editar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
 
 input[type="submit"] {
   background-color: #b83495;
-  color: rgb(29, 29, 29);
+  color: white;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
+
 input[type="submit"]:hover {
   background-color: #7b36a9;
+}
+
+.btn-cerrar {
+  background-color: #b83495;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
 }
 
 .menu-icono {
@@ -123,6 +182,7 @@ input[type="submit"]:hover {
   cursor: pointer;
   display: none;
 }
+
 .header-content {
   display: flex;
   width: 100%;
@@ -199,6 +259,45 @@ hr {
 
 #fomulario {
   display: none;
+}
+
+.btn-eliminar {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #c3069d;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background: #a40202;
+}
+
+.btn-editar {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  background: #c3069d;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-editar:hover {
+  background: #05a402;
+}
+.card {
+  position: relative;
 }
 
 .box-container-1,
