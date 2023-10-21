@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,11 @@
   text-decoration: none;
   list-style: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Bebas Neue", cursive;
   background-color: black;
@@ -33,7 +39,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+  padding: 0px 20px;
 }
 
 .logo {
@@ -57,15 +63,24 @@ header {
   color: #c3069d;
 }
 
+#btn-agregar {
+  display: flex;
+  align-items: center;
+  padding: 7px 20px;
+  background-color: #c3069d;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
 
-.formulario-container
-{
+.formulario-container {
+  backdrop-filter: blur(22px);
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  background-color: #a56ccb;
+  background-color: #a56ccb83;
   padding: 20px;
   border: 3px;
   border-radius: 5px;
@@ -73,45 +88,91 @@ header {
   height: 100vh;
   left: -100vw;
   top: 0;
-  z-index: 1;
-  max-width: 600px;
+  z-index: 1001;
   border-radius: 8px;
   box-shadow: 0 2px 4px #c3069d;
   transition: all 0.5s ease-in-out;
 }
 
-.BTNañadirPelicula
-{
+.editar-container {
+  backdrop-filter: blur(22px);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #a56ccb83;
+  padding: 20px;
+  border: 3px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100vh;
+  left: -100vw;
+  top: 0;
+  z-index: 1001;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #c3069d;
+  transition: all 0.5s ease-in-out;
+}
+
+.abrir-formulario {
   left: 0;
 }
 
-#formulario 
-{
+.btn-cerrar-editar {
+  background-color: #b83495;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+#formulario-agregar,
+#formulario-editar {
   display: flex;
-  flex-direction: column ;
-  gap: 16px;
+  flex-direction: column;
+  gap: 10px;
   width: 300px;
 }
 
+#formulario-agregar label,
+#formulario-editar label {
+  font-size: 20px;
+}
 
-
-
-
-
+#formulario-agregar input,
+#formulario-editar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
 
 input[type="submit"] {
   background-color: #b83495;
-  color: rgb(29, 29, 29);
+  color: white;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
+
 input[type="submit"]:hover {
   background-color: #7b36a9;
 }
 
-
+.btn-cerrar {
+  background-color: #b83495;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
 
 .menu-icono {
   width: 35px;
@@ -121,6 +182,7 @@ input[type="submit"]:hover {
   cursor: pointer;
   display: none;
 }
+
 .header-content {
   display: flex;
   width: 100%;
@@ -186,19 +248,56 @@ hr {
   border: 1px solid magenta;
 }
 
-#BTNañadirPelicula
-{
+#BTNañadirPelicula {
   display: inline-block;
   padding: 10px 20px 10px 10px;
-  border-bottom: 20px ;
+  border-bottom: 20px;
   background-color: #c3069d;
   color: white;
   font-size: 20px;
-  
 }
 
 #fomulario {
   display: none;
+}
+
+.btn-eliminar {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #c3069d;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background: #a40202;
+}
+
+.btn-editar {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  background: #c3069d;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-editar:hover {
+  background: #05a402;
+}
+.card {
+  position: relative;
 }
 
 .box-container-1,
@@ -286,18 +385,26 @@ hr {
 .footer ul {
   display: flex;
 }
+
 footer h3 {
   font-size: 30px;
 }
+
 .footer a {
   color: white;
   font-size: 20px;
   margin-right: 20px;
-  display: block;
+  display: inline-block;
+  text-align: center;
 }
 
 .footer a:hover {
   color: #e949c9;
+}
+
+.menu .naver ul {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 991px) {
@@ -315,51 +422,48 @@ footer h3 {
     background-color: black;
     display: none;
   }
+
+  .menu .naver ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.menu .naver ul li {
-  width: 100%;
+#menu {
+  display: none;
 }
-
-
-
-
 
 #menu:checked ~ .naver {
   display: initial;
 }
 
-.header-content 
-{
+.header-content {
   flex-direction: column;
   padding: 180px 30px 30px 30px;
 }
 
 .header-1 {
-  width: 100% ;
+  width: 100%;
   align-items: center;
 }
 
 .header-2 {
-  width: 100% ;
+  width: 100%;
   align-items: center;
 }
 
-.movies 
-{
+.movies {
   padding: 30px;
 }
 
-.footer 
-{
+.footer {
   margin-top: 30px;
   padding: 30px;
   flex-direction: column;
   text-align: center;
 }
 
-.footer ul 
-{
+.footer ul {
   margin-top: 15px;
   justify-content: center;
 }
